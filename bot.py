@@ -1,5 +1,9 @@
 import logging
+import os
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
+from dotenv import load_dotenv
+
+load_dotenv()
 
 PROXY = {'proxy_url': 'socks5://t1.learn.python.ru:1080',
          'urllib3_proxy_kwargs': {'username': 'learn', 'password': 'python'}}
@@ -9,8 +13,7 @@ logging.basicConfig(format='%(name)s - %(levelname)s - %(message)s',
 
 
 def main():
-    mybot = Updater(
-        "598372667:AAG63-I4p59gi2Jp8IWBGK-KLN1wcyx_1nA", request_kwargs=PROXY)
+    mybot = Updater(os.getenv('TOKEN'), request_kwargs=PROXY)
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me))
