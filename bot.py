@@ -29,3 +29,6 @@ def talk_to_me(bot, update):
     user_text = update.message.text
     print(user_text)
     update.message.reply_text(user_text)
+
+
+main()
