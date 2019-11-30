@@ -35,3 +35,4 @@ Traceback (most recent call last):
   File "c:/projects/mybot/bot.py", line 43, in planetarium
     const = ephem.constellation(planet)
 ValueError: the sequence specifying a position must have exactly two coordinates
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
