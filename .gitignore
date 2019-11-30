@@ -1,2 +1,4 @@
 .env
-.log
+bot.log
+.vscode/*
+env/*
