@@ -36,3 +36,237 @@ Traceback (most recent call last):
     const = ephem.constellation(planet)
 ValueError: the sequence specifying a position must have exactly two coordinates
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 66, in wordcount
+    text = user_text.split("")[1:]
+ValueError: empty separator
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    if text.isdigit() or not text:
+AttributeError: 'list' object has no attribute 'isdigit'
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    if text.isdigit() or not text:
+AttributeError: 'list' object has no attribute 'isdigit'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 68, in wordcount
+    if text.isdigit() or not text:
+AttributeError: 'list' object has no attribute 'isdigit'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    if text.isdigit() or not text:
+AttributeError: 'list' object has no attribute 'isdigit'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    Print("pusto")
+NameError: name 'Print' is not defined
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    Print("pusto")
+NameError: name 'Print' is not defined
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 67, in wordcount
+    Print("pusto")
+NameError: name 'Print' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 85, in next_full_moon
+    user_date = user_date.strptime('"%Y-%m-%d"')
+AttributeError: 'str' object has no attribute 'strptime'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 87, in next_full_moon
+    user_date = user_date.strptime('"%Y-%m-%d"')
+AttributeError: 'str' object has no attribute 'strptime'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 24, in city_game
+    print("123", cities_list[-3])
+IndexError: list index out of range
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 24, in city_game
+    print(cities_list[1])
+IndexError: list index out of range
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 24, in city_game
+    update.message.reply_text(cities_list[-2])
+NameError: name 'cities_list' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 71, in city_game
+    update.message.reply_text(user_city, cities_list[-1])
+IndexError: list index out of range
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:/projects/mybot/bot.py", line 68, in city_game
+    print(cities_list[0])
+NameError: name 'cities_list' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 23, in city_game
+    print(cities_list[0])
+IndexError: list index out of range
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 20, in city_game
+    print(cities_list[0])
+NameError: name 'cities_list' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 16, in enter_city_game
+    update.user_data["cities"] = f.read().split("\n")
+AttributeError: 'Update' object has no attribute 'user_data'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\conversationhandler.py", line 343, in handle_update
+    new_state = handler.handle_update(update, dispatcher, check_result, context)
+  File "c:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 120, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "c:\projects\mybot\city_game_handler.py", line 15, in enter_city_game
+    bot.user_data["cities"] = f.read().split("\n")
+AttributeError: 'Bot' object has no attribute 'user_data'
