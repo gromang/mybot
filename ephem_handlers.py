@@ -2,7 +2,7 @@ import ephem
 from datetime import datetime
 
 
-def planetarium(bot, update):
+def planetarium(update, context):
 
     user_text = update.message.text
     planet = user_text.split(" ")[-1].lower()
@@ -20,7 +20,7 @@ def planetarium(bot, update):
     update.message.reply_text(const[-1])
 
 
-def next_full_moon(bot, update):
+def next_full_moon(update, context):
     user_text = update.message.text
     user_date = user_text.split(" ")[-1]
     # предполагается что пользователь будет вводить дату в формате ГГГГ-ММ-ДД,

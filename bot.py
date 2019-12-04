@@ -28,7 +28,7 @@ logging.basicConfig(
 
 def main():
 
-    mybot = Updater(os.getenv("TOKEN"), request_kwargs=PROXY)
+    mybot = Updater(os.getenv("TOKEN"),request_kwargs=PROXY, use_context=True)
     dp = mybot.dispatcher
     dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(CommandHandler("planet", planetarium))
@@ -44,6 +44,9 @@ def main():
     mybot.start_polling()
     mybot.idle()
 
+def cancel(update, context):
+    update.message.reply_text("Приятно было поиграть.")
+    return ConversationHandler.END
 
 if __name__ == "__main__":
     main()

@@ -1,17 +1,17 @@
-def greet_user(bot, update):
+def greet_user(update, context):
     print(update)
     text = "Вызван /start"
     print(text)
     update.message.reply_text(text)
 
 
-def talk_to_me(bot, update):
+def talk_to_me(update, context):
     user_text = update.message.text
     print(user_text)
     update.message.reply_text(user_text)
 
 
-def wordcount(bot, update):
+def wordcount(update, context):
     user_text = update.message.text
     text = user_text.split(" ")[1:]
     word_cnt = 0
