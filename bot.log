@@ -554,3 +554,34 @@ telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "c:\projects\mybot\handler_cat.py", line 5, in send_cat_picture
+    cat_list = glob('cats/*cat*.pn*')
+TypeError: 'module' object is not callable
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "c:\projects\mybot\handler_cat.py", line 7, in send_cat_picture
+    bot.send_photo(chat_id=update.message.chat_id, photo=open(cat_pic, 'rb'))
+AttributeError: 'Update' object has no attribute 'send_photo'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "c:/projects/mybot/bot.py", line 56, in send_cat_picture
+    context.send_photo(chat_id=update.message.chat_id, photo=open(cat_pic, 'rb'))
+AttributeError: 'CallbackContext' object has no attribute 'send_photo'
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...

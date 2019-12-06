@@ -11,6 +11,7 @@ from dotenv import load_dotenv
 from ephem_handlers import *
 from other_handlers import *
 from city_game_handler import *
+from handler_cat import *
 
 load_dotenv()
 
@@ -34,6 +35,7 @@ def main():
     dp.add_handler(CommandHandler("planet", planetarium))
     dp.add_handler(CommandHandler("wordcount", wordcount))
     dp.add_handler(CommandHandler("next_full_moon", next_full_moon))
+    dp.add_handler(CommandHandler("cat", send_cat_picture))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("city", enter_city_game)],
         states={"start city game": [MessageHandler(Filters.text, city_game)]},
@@ -47,6 +49,7 @@ def main():
 def cancel(update, context):
     update.message.reply_text("Приятно было поиграть.")
     return ConversationHandler.END
+
 
 if __name__ == "__main__":
     main()
