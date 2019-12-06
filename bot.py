@@ -9,11 +9,12 @@ from telegram.ext import (
 )
 from dotenv import load_dotenv
 
-from ephem_handlers import *
-from other_handlers import *
-from city_game_handler import *
-from handler_cat import *
-import settings
+from handler_cat_photo import *
+from handler_city_game import *
+from handler_ephem import *
+from handler_talk_and_word import *
+
+# import settings
 
 load_dotenv()
 
@@ -31,16 +32,20 @@ logging.basicConfig(
 
 def main():
 
-    mybot = Updater(os.getenv("TOKEN"),request_kwargs=PROXY, use_context=True)
+    mybot = Updater(os.getenv("TOKEN"), request_kwargs=PROXY)
     dp = mybot.dispatcher
-    dp.add_handler(CommandHandler("start", greet_user,pass_user_data=True))
+    dp.add_handler(CommandHandler("start", greet_user, pass_user_data=True))
     dp.add_handler(CommandHandler("planet", planetarium))
     dp.add_handler(CommandHandler("wordcount", wordcount))
     dp.add_handler(CommandHandler("next_full_moon", next_full_moon))
-    dp.add_handler(CommandHandler("cat", send_cat_picture, pass_user_data=True))
+    dp.add_handler(CommandHandler("cat", send_cat_picture))
     conv_handler = ConversationHandler(
-        entry_points=[CommandHandler("city", enter_city_game)],
-        states={"start city game": [MessageHandler(Filters.text, city_game)]},
+        entry_points=[CommandHandler("city", enter_city_game, pass_user_data=True)],
+        states={
+            "start city game": [
+                MessageHandler(Filters.text, city_game, pass_user_data=True)
+            ]
+        },
         fallbacks=[CommandHandler("cancel", cancel)],
     )
     dp.add_handler(conv_handler)
@@ -48,7 +53,8 @@ def main():
     mybot.start_polling()
     mybot.idle()
 
-def cancel(update, context):
+
+def cancel(bot, update):
     update.message.reply_text("Приятно было поиграть.")
     return ConversationHandler.END
 
