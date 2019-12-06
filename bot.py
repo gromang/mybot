@@ -8,10 +8,12 @@ from telegram.ext import (
     ConversationHandler,
 )
 from dotenv import load_dotenv
+
 from ephem_handlers import *
 from other_handlers import *
 from city_game_handler import *
 from handler_cat import *
+import settings
 
 load_dotenv()
 
@@ -31,18 +33,18 @@ def main():
 
     mybot = Updater(os.getenv("TOKEN"),request_kwargs=PROXY, use_context=True)
     dp = mybot.dispatcher
-    dp.add_handler(CommandHandler("start", greet_user))
+    dp.add_handler(CommandHandler("start", greet_user,pass_user_data=True))
     dp.add_handler(CommandHandler("planet", planetarium))
     dp.add_handler(CommandHandler("wordcount", wordcount))
     dp.add_handler(CommandHandler("next_full_moon", next_full_moon))
-    dp.add_handler(CommandHandler("cat", send_cat_picture))
+    dp.add_handler(CommandHandler("cat", send_cat_picture, pass_user_data=True))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("city", enter_city_game)],
         states={"start city game": [MessageHandler(Filters.text, city_game)]},
         fallbacks=[CommandHandler("cancel", cancel)],
     )
     dp.add_handler(conv_handler)
-    dp.add_handler(MessageHandler(Filters.text, talk_to_me))
+    dp.add_handler(MessageHandler(Filters.text, talk_to_me, pass_user_data=True))
     mybot.start_polling()
     mybot.idle()
 
