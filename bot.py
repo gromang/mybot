@@ -7,6 +7,7 @@ from telegram.ext import (
     Filters,
     ConversationHandler,
 )
+
 from dotenv import load_dotenv
 
 from handler_cat_photo import *
@@ -14,7 +15,6 @@ from handler_city_game import *
 from handler_ephem import *
 from handler_talk_and_word import *
 
-# import settings
 
 load_dotenv()
 
@@ -49,7 +49,11 @@ def main():
         fallbacks=[CommandHandler("cancel", cancel)],
     )
     dp.add_handler(conv_handler)
+    dp.add_handler(MessageHandler(Filters.regex("^(Призвать КОТЭ)$"), send_cat_picture))
+    dp.add_handler(MessageHandler(Filters.contact, get_contact, pass_user_data=True))
+    dp.add_handler(MessageHandler(Filters.location, get_location, pass_user_data=True))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me, pass_user_data=True))
+
     mybot.start_polling()
     mybot.idle()
 

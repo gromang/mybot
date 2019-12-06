@@ -17,7 +17,7 @@ def planetarium(update, context):
         const = ephem.constellation(ephem.Moon("2019"))
 
     print(const)
-    update.message.reply_text(const[-1])
+    update.message.reply_text(const[-1], reply_markup=get_keyboard())
 
 
 def next_full_moon(update, context):
@@ -28,4 +28,4 @@ def next_full_moon(update, context):
     # что ввел пользователь
     user_date = datetime.strptime(user_date, "%Y-%m-%d")
     moon_date = ephem.next_full_moon(user_date)
-    update.message.reply_text(moon_date)
+    update.message.reply_text(moon_date, reply_markup=get_keyboard())
