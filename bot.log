@@ -29,3 +29,23 @@ telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
 telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "c:\projects\mybot\handler_cat_photo.py", line 11, in send_cat_picture
+    reply_markup=get_keyboard(),
+NameError: name 'get_keyboard' is not defined
+telegram.ext.dispatcher - ERROR - No error handlers are registered, logging exception.
+Traceback (most recent call last):
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\dispatcher.py", line 372, in process_update
+    handler.handle_update(update, self, check, context)
+  File "C:\projects\mybot\env\lib\site-packages\telegram\ext\handler.py", line 117, in handle_update
+    return self.callback(update, context)
+  File "c:\projects\mybot\handler_cat_photo.py", line 11, in send_cat_picture
+    reply_markup=get_keyboard(),
+NameError: name 'get_keyboard' is not defined
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...
+telegram.ext.updater - INFO - Received signal 2 (SIGINT), stopping...

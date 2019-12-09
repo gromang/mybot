@@ -32,33 +32,33 @@ logging.basicConfig(
 
 def main():
 
-    mybot = Updater(os.getenv("TOKEN"), request_kwargs=PROXY)
+    mybot = Updater(os.getenv("TOKEN"), request_kwargs=PROXY, use_context=True)
     dp = mybot.dispatcher
-    dp.add_handler(CommandHandler("start", greet_user, pass_user_data=True))
+    dp.add_handler(CommandHandler("start", greet_user))
     dp.add_handler(CommandHandler("planet", planetarium))
     dp.add_handler(CommandHandler("wordcount", wordcount))
     dp.add_handler(CommandHandler("next_full_moon", next_full_moon))
     dp.add_handler(CommandHandler("cat", send_cat_picture))
     conv_handler = ConversationHandler(
-        entry_points=[CommandHandler("city", enter_city_game, pass_user_data=True)],
+        entry_points=[CommandHandler("city", enter_city_game)],
         states={
             "start city game": [
-                MessageHandler(Filters.text, city_game, pass_user_data=True)
+                MessageHandler(Filters.text, city_game)
             ]
         },
         fallbacks=[CommandHandler("cancel", cancel)],
     )
     dp.add_handler(conv_handler)
     dp.add_handler(MessageHandler(Filters.regex("^(Призвать КОТЭ)$"), send_cat_picture))
-    dp.add_handler(MessageHandler(Filters.contact, get_contact, pass_user_data=True))
-    dp.add_handler(MessageHandler(Filters.location, get_location, pass_user_data=True))
-    dp.add_handler(MessageHandler(Filters.text, talk_to_me, pass_user_data=True))
+    dp.add_handler(MessageHandler(Filters.contact, get_contact))
+    dp.add_handler(MessageHandler(Filters.location, get_location))
+    dp.add_handler(MessageHandler(Filters.text, talk_to_me))
 
     mybot.start_polling()
     mybot.idle()
 
 
-def cancel(bot, update):
+def cancel(update, context):
     update.message.reply_text("Приятно было поиграть.")
     return ConversationHandler.END
 
