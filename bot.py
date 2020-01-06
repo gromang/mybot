@@ -41,15 +41,12 @@ def main():
     dp.add_handler(CommandHandler("cat", send_cat_picture))
     conv_handler = ConversationHandler(
         entry_points=[CommandHandler("city", enter_city_game)],
-        states={
-            "start city game": [
-                MessageHandler(Filters.text, city_game)
-            ]
-        },
+        states={"start city game": [MessageHandler(Filters.text, city_game)]},
         fallbacks=[CommandHandler("cancel", cancel)],
     )
     dp.add_handler(conv_handler)
     dp.add_handler(MessageHandler(Filters.regex("^(Призвать КОТЭ)$"), send_cat_picture))
+    dp.add_handler(MessageHandler(Filters.regex("^(Сменить Аватарку)$"), change_avatar))
     dp.add_handler(MessageHandler(Filters.contact, get_contact))
     dp.add_handler(MessageHandler(Filters.location, get_location))
     dp.add_handler(MessageHandler(Filters.text, talk_to_me))

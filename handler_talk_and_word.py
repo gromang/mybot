@@ -14,9 +14,10 @@ def greet_user(update, context):
 
 def get_keyboard():
     contact_button = KeyboardButton("Прислать контакты", request_contact=True)
-    locatiom_button = KeyboardButton("Прислать координаты", request_location=True)
+    location_button = KeyboardButton("Прислать координаты", request_location=True)
     my_keyboard = ReplyKeyboardMarkup(
-        [["Призвать КОТЭ"], [contact_button, locatiom_button]], resize_keyboard=True
+        [["Призвать КОТЭ", "Сменить Аватарку"], [contact_button, location_button]],
+        resize_keyboard=True,
     )
     return my_keyboard
 
@@ -33,6 +34,13 @@ def get_user_emo(user_data):
     else:
         user_data["emo"] = emojize(choice(settings.USER_EMOJI), use_aliases=True)
         return user_data["emo"]
+
+
+def change_avatar(update, context):
+    if "emo" in context.user_data:
+        del context.user_data["emo"]
+    emo = get_user_emo(context.user_data)
+    update.message.reply_text(f"Готово {emo}")
 
 
 def wordcount(update, context):
@@ -52,13 +60,15 @@ def wordcount(update, context):
 def get_contact(update, context):
     print(update.message.contact)
     update.message.reply_text(
-        "Спасибо {}".format(get_user_emo(context.user_data)), reply_markup=get_keyboard()
+        "Спасибо {}".format(get_user_emo(context.user_data)),
+        reply_markup=get_keyboard(),
     )
 
 
 def get_location(update, context):
     print(update.message.location)
     update.message.reply_text(
-        "Спасибо {}".format(get_user_emo(context.user_data)), reply_markup=get_keyboard()
+        "Спасибо {}".format(get_user_emo(context.user_data)),
+        reply_markup=get_keyboard(),
     )
 
